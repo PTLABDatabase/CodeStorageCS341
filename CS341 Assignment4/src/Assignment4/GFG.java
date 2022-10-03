@@ -10,8 +10,8 @@ public class GFG {
        File text = new File("C:/Users/ab121/OneDrive/Desktop/try.txt");
        Scanner scnr = new Scanner(text);
        String line =null;
-       while (scnr.hasNextLine()) {
-            line = scnr.nextLine();
+       while (scnr.hasNext()) {
+            line = scnr.next();
             tree.insert(line);
        }
 //       tree.insert("30");
