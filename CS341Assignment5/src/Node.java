@@ -1,9 +1,9 @@
 class Node {
-    int data;
-    Node next;
-    Node(int d)
+    int data; //input data from main
+    Node next; //next in list
+    Node(int d) // constructor
     {
-        data = d;
-        next = null;
+        data = d; // instantiating the data
+        next = null; 
     }
 }
