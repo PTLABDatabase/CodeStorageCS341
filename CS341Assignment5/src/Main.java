@@ -83,49 +83,82 @@ public class Main {
 		}
 	}
 
+	//Computing the user file input to return sum, mean and standard deviation
+	
 	public static void computeSomething() throws FileNotFoundException {
+		
+		
+		
+		//Step 1: Getting file input to be used and instantiating the required variables for computation
+		
+		
+		
+		//Letting user now the inputed file is now being computed
 		System.out.println("now computing : " + a);
 		res.setText("Computing: " + a + " | ");
+		//int count for the number of input values
 		int count = 0;
-		LL l = new LL();
-		File text = new File(a);
-		if (text.length() == 0) { 
-			exit();
-			return;
+		LL l = new LL();//new linkedlist instantiation
+		File text = new File(a);//declaring file variable text to hold the inputed file location
+		
+		
+		
+		//Step 2: Checking to see if input is appropriate
+		
+		
+		
+		if (text.length() == 0) { //checking to see file is empty
+			exit();//call to exit sequence
+			return;//stop the code
 		}
-		Scanner scnr = new Scanner(text);
-		String line = null;
-		while (scnr.hasNextLine()) {
-			line = scnr.nextLine();
-			char[] charArray = line.toCharArray();
+		Scanner scnr = new Scanner(text);//new scanner instantiation for reading the inputs
+		String line = null;//string value to hold the inputed values
+		while (scnr.hasNextLine()) {//traverse through the inputed file
+			line = scnr.nextLine();//string line holds the inputed value from the file
+			char[] charArray = line.toCharArray();//char array to traverse through the input string
 			//System.out.print(line);
-			if (line == "") {
+			if (line == "") {//if input is empty
 				exit();
 				return;
-			} else if (line.contains("a")) {
+			} else if (line.contains("a")) {//test case: to see if input is anything other a number
 				exit();
 				return;
 			} else {
-				for (int i = 0; i < charArray.length; i++) {
+				for (int i = 0; i < charArray.length; i++) {//traverse through the string input stored in a char array
 			         char ch = charArray[i];
-			         if (!(ch >= '0' && ch <= '9')) {
+			         if (!(ch >= '0' && ch <= '9')) {//check if anything other than a number has been inputed
 			        	exit();
 			            return;
 			         }
 			      }
-					count++;
-					int a = Integer.parseInt(line);
-					l.push(a);
+				
+				
+				
+		//Step 3: If input is good, proceed with updating list elements and processing sum, mean and standard deviation 
+				
+				
+					count++;//if the string input is adequate, the count is updated and the number of elements is updated
+					int a = Integer.parseInt(line);//changing string input to int
+					l.push(a);//input enqueued to the list
 			}
 		}
-			String sum_and_mean = l.sumOfNodesUtil(count);
-			String sd = l.sdUtil();
-			res.append(sum_and_mean + " | " + "Standard deviation: " + sd);
-			System.out.println(sum_and_mean);
-			System.out.println(sd);
+		
+		
+		
+		//Step 4: Get the computed values from classes and present output to user
+		
+		
+		
+			String sum_and_mean = l.sumOfNodesUtil(count);//string placeholder for sum and mean of elements in list
+			String sd = l.sdUtil();//string placeholder for standard deviation of sum of elements in list
+			res.append(sum_and_mean + " | " + "Standard deviation: " + sd);//outputing the sum, mean and standard deviation to the text area in the GUI
+			System.out.println(sum_and_mean);//printing the sum and mean for console record
+			System.out.println(sd);//printing standard deviation for console record
 	}
 
-public static void exit() {
-	res.setText("Error has occured: Make sure file has each number on a new line, no spaces in between lines, no letters in file");
+//Exit sequence of providing error message to user in case input is not appropriate
+	
+public static void exit() {//exit sequence in case anything goes wrong
+	res.setText("Error has occured: Make sure file has each number on a new line, no spaces in between lines, no letters in file");//output to indicate error
 }
 }
