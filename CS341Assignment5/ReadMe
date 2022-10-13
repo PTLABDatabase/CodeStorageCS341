@@ -4,7 +4,8 @@ Using Java to create a GUI that allows user to input a file of numbers to find t
 
 ## Usage
 
-Can be used to calculate the mean and standard deviation of a list of numbers in a text file. 
+Can be used to calculate the mean and standard deviation of a list of numbers in a text file. This folder contains 3 classes: Main (GUI and output class) 
+,LL (LinkedList class for list functionality, mean and standard deviaiton calculation) and Node ( Node class for pointing the head of list using next and instantiate data.
 
 ## Precautions
 
