@@ -1,0 +1,13 @@
+# CS341 Assignment-5 Version 1.0
+
+Using Java to create a GUI that allows user to input a file of numbers to find the mean and standard deviation.
+
+## Usage
+
+Can be used to calculate the mean and standard deviation of a list of numbers in a text file. 
+
+## Precautions
+
+This is a java program that can be edited, request to comment changes and tests as and where appropriate, 
+the code includes testing to make sure the results are accurate please read comments before deleting code. 
+Make sure to use a text file as input file.
