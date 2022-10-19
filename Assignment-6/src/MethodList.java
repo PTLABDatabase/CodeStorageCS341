@@ -28,13 +28,20 @@
         //return the count value
         return count;
     }
+	 //Return the elements in the list
 	public String toString(){
+	//String variable to return the elements in the list
         String result = "";
+	//Node variable decalaration to the head of the list
         Node current = head;
+	//while head is not empty
         while (current != null){
+		//string result populated with next element in list
             result = result + current.toString() + "\n";
+		//point to the next element in list
             current = current.next;
         }
+		//return string result
         return result;
     }
 }
