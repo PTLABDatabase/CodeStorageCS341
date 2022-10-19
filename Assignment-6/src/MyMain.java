@@ -92,6 +92,7 @@ public class MyMain {
     public static void computeSomething() throws FileNotFoundException {
         System.out.println("now computing : " + a);
         int spaceCount =0;
+        MethodList m = new MethodList();
         LinkedList ll = new LinkedList();
         ForList fl = new ForList();
         WhileLoop w = new WhileLoop();
@@ -107,6 +108,12 @@ public class MyMain {
 			line = scnr.nextLine();
 			if(line == "") {
 				spaceCount++;
+			}
+			else if (line.contains(") {") && !(line.contains("\""))&& !(line.contains("for"))&& !(line.contains("while"))&& !(line.contains("//") || line.contains("/*") || line.contains("*/")
+					|| line.contains("*") || (line.startsWith("String") || (line.contains("if") || (line.contains("else if ")|| (line.contains("else"))))))) {
+				System.out.println(m.toString());
+				m.push(line);
+				ll.push(line);
 			}
 			else if (line.contains("//") || line.contains("/*") || line.contains("*/")
 					|| line.contains("*") && !(line.startsWith("String"))) {
@@ -124,13 +131,16 @@ public class MyMain {
 		System.out.println("number of for loops in code: " + fl.getCount());
 		System.out.println("number of while loops in code: " + w.getCount());
 		System.out.println("number of comments in code: " + llist.getCount());
+		System.out.println("number of methods in code: "  + m.getCount());
 		System.out.println("lines of code without comments: "  + ll.getCount());
 		System.out.println("number of spaces in code: " + spaceCount);
 		res.setText(" number of for loops in code: " + fl.getCount());
 		res.append(" number of while loops in code: " + w.getCount());
 		res.append(" number of comments in code: " + llist.getCount());
-		res.append(" lines of code without comments: "  + ll.getCount());
+		res.append(" number of methods in code: "  + m.getCount());
 		res.append(" lines of code without comments: "  + ll.getCount());
 		res.append(" number of spaces in code: " + spaceCount);
+		res.append(m.toString());
+		
 	}
 }
