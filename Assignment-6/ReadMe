@@ -16,6 +16,8 @@ Make sure to use a Java doc file as input file.
 This software requires the code to have every line of code comment or not 
 on a separate line. The comments should be //, /*,*/ or *. 
 Strings should have quotation marks and all lines should have 
-semicolons at the end  and finally the for and while loops 
+semicolons at the end and finally specification in input java file
 should have the following:
-For: for( and While: while(
+For: for( 
+While: while(
+Method declarations should end with ){
