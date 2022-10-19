@@ -90,44 +90,64 @@ public class MyMain {
     }
     
     public static void computeSomething() throws FileNotFoundException {
+	    //letting user know what file is being computed
         System.out.println("now computing : " + a);
+	    //count for the number of empty spaces in the code
         int spaceCount =0;
+	    // variable for method list
         MethodList m = new MethodList();
+	     // variable for Lines of Code list
         LinkedList ll = new LinkedList();
+	     // variable for  for loop list
         ForList fl = new ForList();
+	     // variable for while loop list
         WhileLoop w = new WhileLoop();
+	     // variable for Comment list
         CommentList llist = new CommentList();
+	    //File variable placeholder
 		File text = new File(a);
+	    //checking if file is empty
 		if (text.length() == 0) { 
-			System.out.print("file is empty");
+			System.out.print("file is empty"); 
 			return;
 		}
+	    //Scanner varaibale to read each line in file
 		Scanner scnr = new Scanner(text);
+	    //String varaible placeholder for each input line
 		String line = null;
+	    //while scanner has a next line
 		while (scnr.hasNextLine()) {
+			//line contains the input line from file
 			line = scnr.nextLine();
+			//if line is empty, space count incremented
 			if(line == "") {
 				spaceCount++;
 			}
+			//checking for methods, push input to comment and lines of code list
 			else if (line.contains(") {") && !(line.contains("\""))&& !(line.contains("for"))&& !(line.contains("while"))&& !(line.contains("//") || line.contains("/*") || line.contains("*/")
 					|| line.contains("*") || (line.startsWith("String") || (line.contains("if") || (line.contains("else if ")|| (line.contains("else"))))))) {
 				System.out.println(m.toString());
 				m.push(line);
 				ll.push(line);
 			}
+			//checking for comments, push to comment list
 			else if (line.contains("//") || line.contains("/*") || line.contains("*/")
 					|| line.contains("*") && !(line.startsWith("String"))) {
 				llist.push(line);
+			//check for for loop, push to for list and lines of code list
 			} else if (line.contains("for (") && !(line.contains("\""))) {
 				fl.push(line);
 				ll.push(line);
+			//check for while loop, push to while list and lines of code list
 			} else if (line.contains("while (") && !(line.contains("\""))) {
 				w.push(line);
 				ll.push(line);
+			//else push to lines of code list
 			} else {
 				ll.push(line);
 			}
 		}
+	    //print result in console and into GUI text area
 		System.out.println("number of for loops in code: " + fl.getCount());
 		System.out.println("number of while loops in code: " + w.getCount());
 		System.out.println("number of comments in code: " + llist.getCount());
