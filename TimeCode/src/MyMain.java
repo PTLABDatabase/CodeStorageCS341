@@ -103,7 +103,8 @@ public class MyMain {
 		Map<Integer, String> map = new HashMap<Integer, String>();// Map for the keywords
 		int tester = 7;// integer for finding the key of the input words to match with the map
 
-		File text2 = new File("C:/Users/ab121/OneDrive/Desktop/javakeywords.txt");// keywords file
+		File text2 = new File("C:/Users/ab121/OneDrive/Desktop/javakeywords.txt");// keywords file, this is added as a file in the src files in the TimeCode 
+		//folder on GitHub, please download that file and hardcode that file path into the code. 
 		if (text2.length() == 0) {
 			System.out.print("file is empty");// checking if file is empty
 			return;
@@ -113,7 +114,7 @@ public class MyMain {
 		while (scnr1.hasNextLine()) {
 			line1 = scnr1.nextLine();
 			int hash = 7;
-			hash = 7 * (line1.length() * 2 + ((line1.charAt(line1.length() - 1) + line1.charAt(0)))) / line1.length();// key
+			hash = 7 * (line1.length() * 2 + ((line1.charAt(line1.length() - 1) + line1.charAt(0)))) / line1.length();// key hash function
 																														// hash
 																														// function
 			map.put(hash, line1);
