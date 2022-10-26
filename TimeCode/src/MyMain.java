@@ -161,11 +161,11 @@ public class MyMain {
 		System.out.println("number of keywords in the code: " + k.getCount());
 		System.out.println("List of keywords in the code: " + k.toString());
 		res.append(" number of comments in code: " + llist.getCount());
-		res.append(" lines of code without comments: " + ll.getCount());
-		res.append(" number of spaces in code: " + spaceCount);
+		//res.append(" lines of code without comments: " + ll.getCount());
+		//res.append(" number of spaces in code: " + spaceCount);
 		res.append(" number of keywords in the code: " + k.getCount());
 		res.append(" List of keywords in the code: " + k.toString());
-		res.append(t.time());
+		res.append(" time taken: " + t.time());
 	}
 }
 
