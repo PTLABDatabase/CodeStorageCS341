@@ -1,0 +1,31 @@
+# CS341 Assignment-7 Version 1.0
+
+Using Java to create a GUI that allows user to input a JAVA file find number of lines in code, number of keywords and the time taken by the code.
+
+## Usage
+
+Can be used to find number of lines in code, number of keywords used java doc file. This folder contains 4 types classes: Main (GUI and output class) 
+,LL (LinkedList class for list functionality for number of lines in code and number of keywords and comments seperately and getting the number of elements in each list),
+Node ( Node class for pointing the head of list using next and instantiate data and Timer( Time calculation for the Main Class). 
+
+## Precautions
+
+This is a java program that can be edited, request to comment changes and tests as and where appropriate, 
+the code includes testing to make sure the results are accurate please read comments before deleting code. 
+
+Make sure to download and then hardcode the keywords file into the java code @ line 106.
+
+Make sure to use a Java doc file as input file.
+
+This software requires the code to have every line of code comment or not 
+on a separate line. The comments should be //, /*,*/ or *. 
+
+Finally specification in input java file
+should have the following:
+
+Each word or letter should have a space between them for example: 
+
+public static void { 
+for ( int i ; i = 0 ; i ++ ) {
+
+****Unless necessary as for increment ++ or  -- or boolean == , != , >= ,etc. *******
