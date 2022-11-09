@@ -1,1 +1,50 @@
+# CS341 Assignment-8 Version 1.0
 
+Using Java to create a GUI that mimics a book store inventory with features of search, insert, delete and list all books from the inventory.
+
+## Usage
+
+Can be used to store books in an inventory using the books sku, name, price and quantity, this data can be stored onto a file on the user's computer if specified by the 
+user while using the code.
+
+## Precautions and how to use for each step:
+
+1> SEARCH
+-> WHEN Search button is clicked
+  -> User will be asked to input the SKU of the book they are trying to find 
+    -> Once inputed, click on the search button
+      -> If book in inventory description of the book (name, price and quantity) will be given
+      -> Else, Not Found will be displayed
+        ->Click RETURN to go back
+        
+
+2> INSERT
+-> WHEN INSERT button is clicked
+ ->User will be asked to select a file
+   -> If file is going to be selected click Specify Output Text File and direct your way to the text file you want to save it in
+     -> If okay with selection click confirm 
+     ->Else, click clear selection and click Specify Output Text File and direct your way to the text file you want to save it in
+   -> If file doesn't wanted be selected or used click the skip button on the top right
+      -> User will be asked to input the SKU, Name, Quantity and Price of the book
+          -> Once inputed, click on the INSERT button
+            -> If file was specified, INSERTION OF DATA WILL HAPPEN IN BOTH THE CODE INVENTORY(TEMPORARY SPACE) AND THE FILE 
+            -> Else, INSERTION OF DATA WILL HAPPEN IN BOTH THE CODE INVENTORY(TEMPORARY SPACE)
+                ->Click RETURN to go back
+  
+
+3> DELETE
+  -> When Delete button is clicked
+    -> User will be prompted to enter the SKU of the book to be deleted
+    -> Once inputed, click on delete button
+      ->If book in inventory it will be deleted and All Done message will be displayed
+      -> Else, Not Found will be displayed
+        ->Click RETURN to go back
+      
+4> LIST ALL
+  -> When user clicks on List All
+    -> User will be prompted to click the LIST ALL button to get all elements in the inventory
+     -> If inventory not empty, books will be displayed
+     -> Else, empty list will be displayed
+      ->Click RETURN to go back
+      
+      
